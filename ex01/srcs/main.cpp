@@ -6,7 +6,7 @@
 /*   By: ltheveni <ltheveni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 15:03:28 by ltheveni          #+#    #+#             */
-/*   Updated: 2025/03/16 15:19:55 by ltheveni         ###   ########.fr       */
+/*   Updated: 2025/03/16 20:22:15 by ltheveni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ void testError() {
   }
 }
 
-void testBigData() {
-  std::cout << "============TESTBIGDATA============" << std::endl;
+void testBigDataMethod() {
+  std::cout << "============TESTBIGDATAMETHOD============" << std::endl;
   std::vector<int> bigData;
   for (int i = 0; i < 10000; ++i)
     bigData.push_back(i * 2);
@@ -64,9 +64,23 @@ void testBigData() {
   std::cout << "longest: " << bigSpan.longestSpan() << std::endl;
 }
 
+void testBigDataFunction() {
+  std::cout << "============TESTBIGDATAFUNCTION============" << std::endl;
+  std::vector<int> bigData;
+  for (int i = 0; i < 10000; ++i)
+    bigData.push_back(i * 2);
+
+  Span bigSpan(10000);
+  addNumbers(bigSpan, bigData.begin(), bigData.end());
+
+  std::cout << "Shortest: " << bigSpan.shortestSpan() << std::endl;
+  std::cout << "longest: " << bigSpan.longestSpan() << std::endl;
+}
+
 int main(void) {
   testPDF();
   testError();
-  testBigData();
+  testBigDataMethod();
+  testBigDataFunction();
   return 0;
 }

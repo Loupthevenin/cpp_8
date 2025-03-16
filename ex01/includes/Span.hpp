@@ -6,7 +6,7 @@
 /*   By: ltheveni <ltheveni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 14:30:12 by ltheveni          #+#    #+#             */
-/*   Updated: 2025/03/16 15:03:17 by ltheveni         ###   ########.fr       */
+/*   Updated: 2025/03/16 20:19:31 by ltheveni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,6 @@ public:
   int shortestSpan() const;
   int longestSpan() const;
 };
+
+void addNumbers(Span &span, std::vector<int>::iterator begin,
+                std::vector<int>::iterator end);
